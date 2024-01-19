@@ -1,7 +1,12 @@
 import '../styles/styles.css'
-import MobileMenu from './modules/MobileMenu' // 'MobileMenu' is a variable name we're creating. Matches the actual name of the class to stay organized.
+import MobileMenu from './modules/MobileMenu' 
+import RevealOnScroll from './modules/RevealOnScroll'
 
-let mobileMenu = new MobileMenu(); // assigning this instance to a variable since we'll probably want to access it later on
+new RevealOnScroll(document.querySelectorAll(".feature-item"), 75)
+new RevealOnScroll(document.querySelectorAll(".testimonial"), 60)
+
+
+let mobileMenu = new MobileMenu(); 
 
 if (module.hot) {
     module.hot.accept()
